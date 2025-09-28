@@ -1,0 +1,54 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* horizontal mittig */
+  justify-content: flex-start; /* startet oben */
+  min-height: 100vh;
+  padding-top: 20px;        /* Abstand zum oberen Rand */
+  box-sizing: border-box;
+}
+
+/* Container für Kalender + Buttons */
+.calendar-container {
+  width: 100%;
+  max-width: 400px;         /* nicht breiter als 400px */
+  margin: 0 auto;           /* horizontal mittig */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Buttons nebeneinander */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .calendar-container {
+    width: 100%; /* volle Breite */
+    padding: 0 10px;
+  }
+
+  .calendar {
+    width: 100%; /* füllt Bildschirm */
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr); /* Spalten teilen Platz gleichmäßig */
+  }
+
+  .button-row {
+    flex-direction: row;
+    width: 100%; /* füllt volle Breite */
+  }
+
+  .custom-btn {
+    flex: 1; /* beide Buttons gleich breit */
+    font-size: 18px;
+    padding: 14px 0;
+  }
+}

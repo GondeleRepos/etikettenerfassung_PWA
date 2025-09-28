@@ -1,0 +1,40 @@
+.custom-btn {
+  flex: 1; /* beide gleich breit */
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Blau */
+.custom-btn.primary {
+  background-color: #377AFF;
+  color: white;
+}
+
+.custom-btn.primary:hover {
+  background-color: #0062cc;
+}
+
+/* Grau */
+.custom-btn.secondary {
+  background-color: #e5e5ea;
+  color: #000;
+}
+
+.custom-btn.secondary:hover {
+  background-color: #d1d1d6;
+}
+
+/* Container für Buttons */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Abstand zwischen Buttons */
+  margin-top: 20px;
+  width: 100%; /* gleiche Breite wie Kalender */
+  max-width: 280px; /* gleiche Breite wie dein Kalender (7x40px Spalten) */
+}
